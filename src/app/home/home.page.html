@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/create">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let song of dedicasList | async">
+    <ion-card-header>
+      {{ song.nomEmet }}
+    </ion-card-header>
+    <ion-card-content>
+      Artist Name: {{ song.nomDest }}
+
+      <div>
+        Artist Name: {{ song.message }}
+        <p>Artist Name: {{ song.createdAt| date:'short' }}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
